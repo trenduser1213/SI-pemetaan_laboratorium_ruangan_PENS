@@ -1,0 +1,13 @@
+[2022-03-29T02:53:43.585Z] Validating found git in: git
+[2022-03-29T02:53:43.627Z] Using git 2.30.2 from git
+[2022-03-29T02:53:44.158Z] > git rev-parse --git-dir [39ms]
+[2022-03-29T02:53:44.180Z] Open repository: /home/www
+[2022-03-29T02:53:44.409Z] > git fetch [146ms]
+[2022-03-29T02:53:44.409Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-03-29T02:53:44.579Z] > git symbolic-ref --short HEAD [11ms]
+[2022-03-29T02:53:44.585Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track) refs/heads/master refs/remotes/master [1ms]
+[2022-03-29T02:53:44.599Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+[2022-03-29T02:53:44.601Z] > git remote --verbose [3ms]
+[2022-03-29T02:53:45.775Z] > git config --get commit.template [1066ms]
+[2022-03-29T02:53:45.905Z] > git ls-files --stage -- /home/www/admin/index.php [27ms]
+[2022-03-29T02:53:45.944Z] > git cat-file -s 1354a2c79aa606236de42340058f63b21c85ec8a [34ms]

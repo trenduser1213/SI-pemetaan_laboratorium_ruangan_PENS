@@ -1,0 +1,13 @@
+[2022-03-29 02:53:39.084] [exthost] [info] Extension host with pid 1064 started
+[2022-03-29 02:53:40.057] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features, startup: false, activationEvent: 'onLanguage:php'
+[2022-03-29 02:53:40.104] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-03-29 02:53:40.109] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+[2022-03-29 02:53:40.115] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-03-29 02:53:42.994] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-03-29 02:53:43.637] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-29 02:53:43.658] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-29 02:53:43.665] [exthost] [info] ExtensionService#_doActivateExtension GitHub.copilot, startup: false, activationEvent: 'onStartupFinished'
+[2022-03-29 02:53:43.998] [exthost] [info] Eager extensions activated
+[2022-03-29 02:53:44.689] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2575
+[2022-03-29 02:55:11.759] [exthost] [info] extension host terminating: received terminate message from renderer
+[2022-03-29 02:55:11.786] [exthost] [info] Extension host with pid 1064 exiting with code 0

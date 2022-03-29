@@ -1,0 +1,11 @@
+[2022-03-27 05:07:26.356] [remoteagent] [info] Extension host agent started.
+[2022-03-27 05:07:26.903] [remoteagent] [info] [127.0.0.1][e0414607][ManagementConnection] New connection established.
+[2022-03-27 05:07:26.952] [remoteagent] [info] [127.0.0.1][5c66aeb2][ExtensionHostConnection] New connection established.
+[2022-03-27 05:07:26.958] [remoteagent] [info] [127.0.0.1][5c66aeb2][ExtensionHostConnection] <4073> Launched Extension Host Process.
+[2022-03-27 05:10:38.972] [remoteagent] [info] Getting Manifest... github.copilot
+[2022-03-27 05:10:39.136] [remoteagent] [info] Installing extension: github.copilot
+[2022-03-27 05:10:41.662] [remoteagent] [info] Downloaded extension: github.copilot /home/www/.vscode-server/data/CachedExtensionVSIXs/github.copilot-1.9.5350
+[2022-03-27 05:10:41.880] [remoteagent] [info] Extracted extension to /home/www/.vscode-server/extensions/.c7a50196-c8b3-4c91-9c88-cea76b41804f: github.copilot
+[2022-03-27 05:10:41.893] [remoteagent] [info] Renamed to /home/www/.vscode-server/extensions/github.copilot-1.9.5350
+[2022-03-27 05:10:41.895] [remoteagent] [info] Extracting completed. github.copilot
+[2022-03-27 05:10:41.895] [remoteagent] [info] Extension installed successfully: github.copilot
