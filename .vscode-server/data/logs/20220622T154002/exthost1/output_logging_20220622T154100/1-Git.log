@@ -1,0 +1,129 @@
+[2022-06-22T15:41:04.478Z] Log level: Info
+[2022-06-22T15:41:04.481Z] [info] Validating found git in: git
+[2022-06-22T15:41:04.516Z] [info] Using git 2.30.2 from git
+[2022-06-22T15:41:04.914Z] > git rev-parse --show-toplevel [381ms]
+[2022-06-22T15:41:05.113Z] > git rev-parse --git-dir --git-common-dir [126ms]
+[2022-06-22T15:41:05.166Z] [info] Open repository: /home/www
+[2022-06-22T15:41:05.518Z] > git fetch [271ms]
+[2022-06-22T15:41:05.518Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:41:05.565Z] > git status -z -uall [293ms]
+[2022-06-22T15:41:06.080Z] > git check-ignore -v -z --stdin [10ms]
+[2022-06-22T15:41:06.421Z] > git show --textconv :includes/penelitian.php [7ms]
+[2022-06-22T15:41:06.424Z] > git ls-files --stage -- /home/www/includes/penelitian.php [4ms]
+[2022-06-22T15:41:07.197Z] > git show --textconv :viewDaftarMateri.php [7ms]
+[2022-06-22T15:41:07.200Z] > git ls-files --stage -- /home/www/viewDaftarMateri.php [4ms]
+[2022-06-22T15:41:07.562Z] > git check-ignore -v -z --stdin [5ms]
+[2022-06-22T15:41:09.924Z] > git show --textconv :includes/penelitian.php [7ms]
+[2022-06-22T15:41:09.928Z] > git ls-files --stage -- /home/www/includes/penelitian.php [5ms]
+[2022-06-22T15:41:10.309Z] > git check-ignore -v -z --stdin [5ms]
+[2022-06-22T15:41:13.568Z] > git symbolic-ref --short HEAD [3ms]
+[2022-06-22T15:41:13.574Z] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+[2022-06-22T15:41:13.584Z] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+[2022-06-22T15:41:13.587Z] > git remote --verbose [4ms]
+[2022-06-22T15:41:17.557Z] > git config --get commit.template [27ms]
+[2022-06-22T15:44:05.536Z] > git fetch [5ms]
+[2022-06-22T15:44:05.536Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:47:05.555Z] > git fetch [6ms]
+[2022-06-22T15:47:05.555Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:47:37.658Z] > git show --textconv :includes/pegawai.php [7ms]
+[2022-06-22T15:47:37.666Z] > git ls-files --stage -- /home/www/includes/pegawai.php [9ms]
+[2022-06-22T15:47:39.147Z] > git show --textconv :includes/penelitian.php [9ms]
+[2022-06-22T15:47:39.151Z] > git ls-files --stage -- /home/www/includes/penelitian.php [4ms]
+[2022-06-22T15:50:05.570Z] > git fetch [5ms]
+[2022-06-22T15:50:05.570Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:53:05.587Z] > git fetch [7ms]
+[2022-06-22T15:53:05.587Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:56:05.599Z] > git fetch [4ms]
+[2022-06-22T15:56:05.599Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T15:59:05.611Z] > git fetch [5ms]
+[2022-06-22T15:59:05.611Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:02:05.627Z] > git fetch [6ms]
+[2022-06-22T16:02:05.627Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:05:05.640Z] > git fetch [7ms]
+[2022-06-22T16:05:05.640Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:08:05.658Z] > git fetch [7ms]
+[2022-06-22T16:08:05.658Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:11:05.675Z] > git fetch [5ms]
+[2022-06-22T16:11:05.675Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:14:05.694Z] > git fetch [8ms]
+[2022-06-22T16:14:05.694Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:17:05.710Z] > git fetch [6ms]
+[2022-06-22T16:17:05.710Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:20:05.728Z] > git fetch [7ms]
+[2022-06-22T16:20:05.728Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:23:05.741Z] > git fetch [5ms]
+[2022-06-22T16:23:05.741Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:26:05.752Z] > git fetch [4ms]
+[2022-06-22T16:26:05.752Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:29:05.768Z] > git fetch [5ms]
+[2022-06-22T16:29:05.768Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:32:05.786Z] > git fetch [7ms]
+[2022-06-22T16:32:05.786Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:35:05.802Z] > git fetch [5ms]
+[2022-06-22T16:35:05.802Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:38:05.821Z] > git fetch [8ms]
+[2022-06-22T16:38:05.821Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:41:05.836Z] > git fetch [5ms]
+[2022-06-22T16:41:05.836Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:44:05.855Z] > git fetch [8ms]
+[2022-06-22T16:44:05.855Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:47:05.871Z] > git fetch [6ms]
+[2022-06-22T16:47:05.871Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:50:05.885Z] > git fetch [5ms]
+[2022-06-22T16:50:05.885Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:53:05.902Z] > git fetch [6ms]
+[2022-06-22T16:53:05.902Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:56:05.919Z] > git fetch [5ms]
+[2022-06-22T16:56:05.919Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T16:59:05.931Z] > git fetch [5ms]
+[2022-06-22T16:59:05.931Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:02:05.948Z] > git fetch [7ms]
+[2022-06-22T17:02:05.948Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:05:05.964Z] > git fetch [5ms]
+[2022-06-22T17:05:05.964Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:08:05.978Z] > git fetch [5ms]
+[2022-06-22T17:08:05.978Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:11:05.996Z] > git fetch [7ms]
+[2022-06-22T17:11:05.996Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:14:06.007Z] > git fetch [4ms]
+[2022-06-22T17:14:06.007Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:17:06.023Z] > git fetch [5ms]
+[2022-06-22T17:17:06.023Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:20:06.038Z] > git fetch [6ms]
+[2022-06-22T17:20:06.038Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:23:06.055Z] > git fetch [7ms]
+[2022-06-22T17:23:06.055Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:26:06.071Z] > git fetch [5ms]
+[2022-06-22T17:26:06.071Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:29:06.089Z] > git fetch [6ms]
+[2022-06-22T17:29:06.089Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:32:06.105Z] > git fetch [5ms]
+[2022-06-22T17:32:06.105Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:35:06.123Z] > git fetch [8ms]
+[2022-06-22T17:35:06.123Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:38:06.138Z] > git fetch [5ms]
+[2022-06-22T17:38:06.138Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:41:06.152Z] > git fetch [5ms]
+[2022-06-22T17:41:06.152Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:44:06.172Z] > git fetch [5ms]
+[2022-06-22T17:44:06.172Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:47:06.184Z] > git fetch [4ms]
+[2022-06-22T17:47:06.184Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:50:06.199Z] > git fetch [5ms]
+[2022-06-22T17:50:06.199Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:53:06.217Z] > git fetch [8ms]
+[2022-06-22T17:53:06.217Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:56:06.232Z] > git fetch [5ms]
+[2022-06-22T17:56:06.232Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T17:59:06.243Z] > git fetch [5ms]
+[2022-06-22T17:59:06.243Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T18:02:06.258Z] > git fetch [5ms]
+[2022-06-22T18:02:06.258Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T18:05:06.276Z] > git fetch [7ms]
+[2022-06-22T18:05:06.276Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T18:08:06.292Z] > git fetch [5ms]
+[2022-06-22T18:08:06.292Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T18:11:06.310Z] > git fetch [7ms]
+[2022-06-22T18:11:06.310Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-22T18:14:06.326Z] > git fetch [5ms]
+[2022-06-22T18:14:06.326Z] error: cannot open .git/FETCH_HEAD: Permission denied

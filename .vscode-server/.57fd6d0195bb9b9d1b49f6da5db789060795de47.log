@@ -1,0 +1,17 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to 127.0.0.1:37501 (IPv4)
+Extension host agent listening on 37501
+
+[11:48:33] Extension host agent started.
+[11:48:34] Deleted from disk github.copilot /home/www/.vscode-server/extensions/github.copilot-1.14.5744
+[11:48:35] [127.0.0.1][401929cf][ManagementConnection] New connection established.
+[11:48:35] [127.0.0.1][4aba7081][ExtensionHostConnection] New connection established.
+[11:48:35] [127.0.0.1][4aba7081][ExtensionHostConnection] <15435> Launched Extension Host Process.
+Overwriting extension /home/www/.vscode-server/bin/57fd6d0195bb9b9d1b49f6da5db789060795de47/extensions/ms-vscode.js-debug-companion with /home/www/.vscode-server/extensions/ms-vscode.js-debug-companion-1.0.18.
+[12:09:51] [127.0.0.1][401929cf][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.

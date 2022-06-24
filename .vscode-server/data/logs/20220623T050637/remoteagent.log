@@ -1,0 +1,5 @@
+[2022-06-23 05:06:37.416] [remoteagent] [info] Extension host agent started.
+[2022-06-23 05:06:37.929] [remoteagent] [info] [127.0.0.1][be9ced0f][ManagementConnection] New connection established.
+[2022-06-23 05:06:37.933] [remoteagent] [info] [127.0.0.1][50716092][ExtensionHostConnection] New connection established.
+[2022-06-23 05:06:37.937] [remoteagent] [info] [127.0.0.1][50716092][ExtensionHostConnection] <11050> Launched Extension Host Process.
+[2022-06-23 07:36:04.275] [remoteagent] [info] [127.0.0.1][be9ced0f][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.

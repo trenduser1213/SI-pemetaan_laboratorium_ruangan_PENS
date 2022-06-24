@@ -1,0 +1,30 @@
+[2022-06-23T00:59:44.955Z] Log level: Info
+[2022-06-23T00:59:44.958Z] [info] Validating found git in: git
+[2022-06-23T00:59:45.000Z] [info] Using git 2.30.2 from git
+[2022-06-23T00:59:45.557Z] > git rev-parse --show-toplevel [527ms]
+[2022-06-23T00:59:45.700Z] > git rev-parse --git-dir --git-common-dir [82ms]
+[2022-06-23T00:59:45.726Z] [info] Open repository: /home/www
+[2022-06-23T00:59:45.797Z] > git fetch [33ms]
+[2022-06-23T00:59:45.797Z] error: cannot open .git/FETCH_HEAD: Permission denied
+[2022-06-23T00:59:45.932Z] > git status -z -uall [156ms]
+[2022-06-23T00:59:46.702Z] > git check-ignore -v -z --stdin [7ms]
+[2022-06-23T00:59:48.196Z] > git show --textconv :viewPenelitian.php [7ms]
+[2022-06-23T00:59:48.201Z] > git ls-files --stage -- /home/www/viewPenelitian.php [6ms]
+[2022-06-23T01:08:58.725Z] > git show --textconv :includes/penelitian.php [6ms]
+[2022-06-23T01:08:58.729Z] > git ls-files --stage -- /home/www/includes/penelitian.php [5ms]
+[2022-06-23T01:08:59.544Z] > git check-ignore -v -z --stdin [3ms]
+[2022-06-23T01:11:53.524Z] > git show --textconv :viewPenelitian.php [7ms]
+[2022-06-23T01:11:53.530Z] > git ls-files --stage -- /home/www/viewPenelitian.php [7ms]
+[2022-06-23T01:18:36.696Z] > git show --textconv :includes/penelitian.php [9ms]
+[2022-06-23T01:18:36.699Z] > git ls-files --stage -- /home/www/includes/penelitian.php [4ms]
+[2022-06-23T01:18:36.925Z] > git check-ignore -v -z --stdin [6ms]
+[2022-06-23T01:25:46.327Z] > git show --textconv :viewPenelitian.php [8ms]
+[2022-06-23T01:25:46.331Z] > git ls-files --stage -- /home/www/viewPenelitian.php [5ms]
+[2022-06-23T01:26:10.445Z] > git show --textconv :includes/penelitian.php [7ms]
+[2022-06-23T01:26:10.448Z] > git ls-files --stage -- /home/www/includes/penelitian.php [4ms]
+[2022-06-23T01:27:23.921Z] > git show --textconv :viewPenelitian.php [8ms]
+[2022-06-23T01:27:23.924Z] > git ls-files --stage -- /home/www/viewPenelitian.php [4ms]
+[2022-06-23T01:28:35.832Z] > git show --textconv :viewPengumuman.php [6ms]
+[2022-06-23T01:28:35.843Z] > git ls-files --stage -- /home/www/viewPengumuman.php [11ms]
+[2022-06-23T01:28:46.250Z] > git show --textconv :viewPenelitian.php [7ms]
+[2022-06-23T01:28:46.253Z] > git ls-files --stage -- /home/www/viewPenelitian.php [4ms]

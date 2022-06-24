@@ -1,0 +1,23 @@
+<?php
+require_once 'func.inc.php';
+//fungsi untuk menampilkan link materi per ruang
+function materiPerRuang($idRuang){
+    $con = koneksiDB();
+    $sql = "SELECT * FROM materi WHERE ruang = '$idRuang'";
+    $rows = query_getAll($con, $sql);
+    oci_fetch_all( $rows, $hasil, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
+    return $hasil;
+}
+
+// fungsi untuk menambahkan materi per ruang
+function tambahMateri($idRuang, $judul, $link){
+    var_dump($judul);
+}
+
+
+
+
+
+
+
+?>

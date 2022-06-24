@@ -13,6 +13,12 @@ function konekDb($db_user, $db_pass) {
     return $con;
 }
 
+function koneksiDB(){
+    $db_user = "pa0021";
+    $db_pass = "375300";
+    $con = konekDb($db_user, $db_pass);
+    return $con;
+}
 
 /**
  * eksekusi query db
@@ -24,6 +30,20 @@ function konekDb($db_user, $db_pass) {
  * @param  string $sql query yang di jalankan
  * @return oci_resource      resouce oci
  */
+function query_getAll($con, $sql)
+{
+    $parse = oci_parse($con, $sql);
+    oci_execute($parse);
+    return $parse;
+}
+
+function query_count($con, $sql)
+{
+	$parse = oci_parse($con, $sql);
+	oci_execute($parse);
+	return $parse;
+}
+
 function query_view($con, $sql, $data)
 {
     $parse = oci_parse($con, $sql);
@@ -34,12 +54,12 @@ function query_view($con, $sql, $data)
     return $parse;
 }
 
-function query_insert($con, $sql, $data)
+function query_insert($con, $sql)
 {
     $parse = oci_parse($con, $sql);
-	foreach ($data as $key => $val) {    
-    	oci_bind_by_name($parse, $key, $data[$key]);
-	}
+	// foreach ($data as $key => $val) {    
+    // 	oci_bind_by_name($parse, $key, $data[$key]);
+	// }
     oci_execute($parse);
 	if (oci_num_rows($parse)>0)
     	return "Success Insert";
@@ -47,12 +67,12 @@ function query_insert($con, $sql, $data)
 		return "Failed Insert";	
 }
 
-function query_update($con, $sql, $data)
+function query_update($con, $sql)
 {
     $parse = oci_parse($con, $sql);
-	foreach ($data as $key => $val) {    
-    	oci_bind_by_name($parse, $key, $data[$key]);
-	}
+//	foreach ($data as $key => $val) {
+//    	oci_bind_by_name($parse, $key, $data[$key]);
+//	}
     oci_execute($parse);
 	if (oci_num_rows($parse)>0)
     	return "Success Update";
@@ -60,16 +80,38 @@ function query_update($con, $sql, $data)
 		return "Failed Update";	
 }
 
-function query_delete($con, $sql, $data)
+function query_delete($con, $sql)
 {
     $parse = oci_parse($con, $sql);
-	foreach ($data as $key => $val) {    
-    	oci_bind_by_name($parse, $key, $data[$key]);
-	}
+	// foreach ($data as $key => $val) {    
+    // 	oci_bind_by_name($parse, $key, $data[$key]);
+	// }
     oci_execute($parse);
 	if (oci_num_rows($parse)>0)
     	return "Success Delete";
 	else
 		return "Failed Delete";	
 }
+function query_insert_id($con, $sql)
+{
+	$parse = oci_parse($con, $sql); 
+	// oci_bind_by_name($parse);
+	oci_execute($parse);
+	if (oci_num_rows($parse)<0)
+		return "Success Insert";
+	else
+		return "Failed Insert";	
+}	
+// function query_insert_id($con, $sql)
+// {
+// 	$parse = oci_parse($con, $sql);
+// 	foreach ($data as $key => $val) {    
+// 		oci_bind_by_name($parse, $key, $data[$key]);
+// 	}
+// 	oci_execute($parse);
+// 	if (oci_num_rows($parse)>0)
+// 		return "Success Insert";
+// 	else
+// 		return "Failed Insert";	
+// }
 ?>

@@ -1,8 +1,0 @@
-[2022-03-27 05:49:42.123] [remoteagent] [info] Extension host agent started.
-[2022-03-27 05:49:43.120] [remoteagent] [error] [127.0.0.1][e0414607][ManagementConnection] Unknown reconnection token (never seen).
-[2022-03-27 05:50:47.891] [remoteagent] [info] [127.0.0.1][8924a240][ManagementConnection] New connection established.
-[2022-03-27 05:50:48.042] [remoteagent] [info] [127.0.0.1][b66da2cb][ExtensionHostConnection] New connection established.
-[2022-03-27 05:50:48.046] [remoteagent] [info] [127.0.0.1][b66da2cb][ExtensionHostConnection] <537> Launched Extension Host Process.
-[2022-03-27 05:57:31.362] [remoteagent] [info] [127.0.0.1][8924a240][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
-[2022-03-27 05:57:31.408] [remoteagent] [info] [127.0.0.1][b66da2cb][ExtensionHostConnection] <537> Extension Host Process exited with code: 0, signal: null.
-[2022-03-27 05:57:31.408] [remoteagent] [info] Last EH closed, waiting before shutting down
