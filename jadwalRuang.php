@@ -6,7 +6,15 @@ $jadwalRuang = jadwalRuang($id);
 ?>
 <div class="card shadow mb-3">
     <div class="card-header py-3">
-        <p class="text-primary m-0 font-weight-bold">Jadwal Ruang</p>
+        <p class="text-primary m-0 font-weight-bold">
+    <?php
+    if($cekRulesKepalaRuang != true && $cekRulesAsistenRuang != true && $cekRulesTeknisiRuang != true){ ?>
+            Jadwal Ruang
+    <?php }else{ ?>
+            Jadwal Ruang
+            <a class="btn btn-primary" href="export_jadwal.php?jadwalRuang=<?=$id?>">export</a>
+            <?php } ?>
+        </p>
     </div>
     <div class="card-body">
     <div class="table-responsive-lg scroll">

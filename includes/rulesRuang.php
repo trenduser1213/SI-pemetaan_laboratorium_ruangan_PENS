@@ -8,7 +8,7 @@ function rulesKepalaRuang($statusPengguna, $idRuang, $idAnggota){
         $db_user = "pa0021";
         $db_pass = "375300";
         $con = konekDb($db_user, $db_pass);
-        $sql = "Select x.nip AS NIP  from ruang r INNER JOIN pegawai x ON r.kepala = x.nomor WHERE r.nomor = '$idRuang'";
+        $sql = "Select x.nip AS NIP  from RUANGBARU r INNER JOIN pegawai x ON r.kepala = x.nomor WHERE r.nomor = '$idRuang'";
         $row = query_getAll($con, $sql);
         oci_fetch_all($row, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
         if(isset($rows[0]['NIP'])==null){
@@ -28,7 +28,7 @@ function rulesAsistenRuang($statusPengguna, $idRuang, $idAnggota){
         $db_user = "pa0021";
         $db_pass = "375300";
         $con = konekDb($db_user, $db_pass);
-        $sql = "Select x.nip AS NIP  from ruang r INNER JOIN pegawai x ON r.asisten = x.nomor WHERE r.nomor = '$idRuang'";
+        $sql = "Select x.nip AS NIP  from RUANGBARU r INNER JOIN pegawai x ON r.asisten = x.nomor WHERE r.nomor = '$idRuang'";
         $row = query_getAll($con, $sql);
         // $hasil = deco
         oci_fetch_all($row, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
@@ -50,7 +50,7 @@ function rulesTeknisiRuang($statusPengguna, $idRuang, $idAnggota){
         $db_user = "pa0021";
         $db_pass = "375300";
         $con = konekDb($db_user, $db_pass);
-        $sql = "Select x.nip AS NIP  from ruang r INNER JOIN pegawai x ON r.teknisi = x.nomor WHERE r.nomor = '$idRuang'";
+        $sql = "Select x.nip AS NIP  from RUANGBARU r INNER JOIN pegawai x ON r.teknisi = x.nomor WHERE r.nomor = '$idRuang'";
         $row = query_getAll($con, $sql);
         oci_fetch_all($row, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
         if(isset($rows[0]['NIP'])==null){
@@ -61,6 +61,24 @@ function rulesTeknisiRuang($statusPengguna, $idRuang, $idAnggota){
             return false;
         }
     }
+}
+ 
+function rulesAnggotaRuang($statusPengguna, $idRuang, $idAnggota){
+    $con = koneksiDB();
+    $sql = "SELECT anggota AS ANGGOTA FROM anggotalab WHERE anggota = $idAnggota AND ruang = $idRuang AND keanggotaan = 2";
+    $row = query_getAll($con, $sql);
+    oci_fetch_all($row, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
+    // var_dump($rows[0]['ANGGOTA']);
+    // var_dump($idAnggota);
+    if(isset($rows[0]['ANGGOTA'])==null){
+        return false;
+    }elseif($rows[0]['ANGGOTA'] == $idAnggota){
+        return true;
+    }else{
+        return false;
+    }
+
+    
 }
 
 ?>

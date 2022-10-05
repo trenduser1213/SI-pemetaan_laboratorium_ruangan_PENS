@@ -1,4 +1,5 @@
 <?php
+//https://youtu.be/y3GIgsRUYsU
 require_once 'includes/ruang.php';
 require_once 'includes/anggotaRuang.php';
 require_once 'includes/rulesRuang.php';
@@ -15,12 +16,13 @@ if($_SESSION['StatusPengguna'] == 'Pegawai'){
 }
 $statusPengguna = $_SESSION['StatusPengguna'];
 $cekRulesKepalaRuang = RulesKepalaRuang($statusPengguna, $idRuang, $idAnggota);
-var_dump($cekRulesKepalaRuang);
+// var_dump($cekRulesKepalaRuang);
 $cekRulesAsistenRuang = RulesAsistenRuang($statusPengguna, $idRuang, $idAnggota);
-var_dump($cekRulesAsistenRuang);
+// var_dump($cekRulesAsistenRuang);
 $cekRulesTeknisiRuang = RulesTeknisiRuang($statusPengguna, $idRuang, $idAnggota);
-var_dump($cekRulesTeknisiRuang);
-
+// var_dump($cekRulesTeknisiRuang);
+$cekRulesAnggotaRuang =  rulesAnggotaRuang($statusPengguna, $idRuang, $idAnggota);
+// var_dump($cekRulesAnggotaRuang);
 ?>
 <?php
 $detailRuang = detailRuang($idRuang);

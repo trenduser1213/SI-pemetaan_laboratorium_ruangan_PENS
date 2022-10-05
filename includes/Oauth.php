@@ -1,6 +1,7 @@
 <?php
 class Oauth {
     public function login($email, $password) {
+        require_once 'includes/func.inc.php';
         
         $header=array("netid: $email","password: ".base64_encode($password));
         $data = curl_init();
@@ -19,12 +20,29 @@ class Oauth {
         //    session_start();
             
             // var_dump($dataDcode->NRP);
+            $con=koneksiDB();
             if(isset($dataDcode->NRP)){
                 $_SESSION['ID_user'] = $dataDcode->NRP;
                 $_SESSION['StatusPengguna'] = "Mahasiswa";
+                $detail=$dataDcode->NRP;
+                $sql="select M.nomor AS nomor_mahasiswa, M.*,K.kode as nama_kelas,J.jurusan as nama_jurusan, K.* 
+                from mahasiswa M JOIN kelas K on M.kelas = K.nomor
+                JOIN jurusan J on K.jurusan = J.nomor WHERE nrp = '$detail'";
+                $hasil=query_getAll($con, $sql);
+                oci_fetch_all($hasil, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
+                $_SESSION['Jurusan']=$rows[0]['NAMA_JURUSAN'];
+                $_SESSION['ID_Jurusan']=$rows[0]['JURUSAN'];
+                $_SESSION['Nama_Kelas']=$rows[0]['NAMA_KELAS'];
+                $_SESSION['Wali_Kelas']=$rows[0]['WALI_KELAS']; 
             }else{
                 $_SESSION['ID_user'] = $dataDcode->NIP;
-                if($dataDcode->Name == "Idris Winarno"){
+                $detail=$dataDcode->NIP;
+                $sql="select P.*, J.jurusan as nama_jurusan from pegawai P JOIN jurusan J on P.jurusan = J.nomor where NIP = '$detail'";
+                $hasil=query_getAll($con, $sql);
+                oci_fetch_all($hasil, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
+                $_SESSION['Jurusan']=$rows[0]['NAMA_JURUSAN'];
+                $_SESSION['ID_Jurusan']=$rows[0]['JURUSAN'];
+                if($dataDcode->Name == "EEPIS Network Administrator"){
                     $_SESSION['StatusPengguna'] = "admin";
                 }else{
                     $_SESSION['StatusPengguna'] = "Pegawai";
@@ -53,4 +71,14 @@ class Oauth {
         $hasil = curl_exec($data);
         curl_close($data);
     }
+    
+    // function detailMahasiswa($detail){
+    //     $sql="select M.nomor AS nomor_mahasiswa, M.*,K.kode as nama_kelas,J.jurusan, K.* 
+    //             from mahasiswa M JOIN kelas K on M.kelas = K.nomor
+    //             JOIN jurusan J on K.jurusan = J.nomor WHERE nrp = '$detail'";
+    //     $con=koneksiDB();
+    //     $hasil=query_getAll($con, $sql);
+    //     oci_fetch_all($hasil, $rows, 0, 0, OCI_FETCHSTATEMENT_BY_ROW);
+    //     return $rows;
+    // }
 }

@@ -31,6 +31,13 @@ function deletePenelitian($nomorPenelitian, $idRuang){
     }
 }
 
+function updatePenelitian($judulPenelitian, $idRuang, $idPeneliti, $idDosbim1, $idDosbim2, $idDosbim3, $nomorPenelitian){
+    $con = koneksiDB();
+    $sql = "UPDATE penelitian SET judul= '$judulPenelitian' , dosbim1 = $idDosbim1, dosbim2 = $idDosbim2, dosbim3 = $idDosbim3 WHERE ruang = $idRuang AND nomor = $nomorPenelitian";
+    $hasil = query_update($con, $sql);
+    var_dump($hasil);
+}
+
 
 
 

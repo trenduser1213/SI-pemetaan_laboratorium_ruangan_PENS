@@ -13,9 +13,17 @@ if(isset($_POST['kirim'])) {
 
                             <div class="card mb-3 shadow">
                                 <div class="card-header py-3">
-                                    <p class="text-primary m-0 font-weight-bold">Pengumuman
+                                <?php if($cekRulesKepalaRuang != true && $cekRulesAsistenRuang != true && $cekRulesTeknisiRuang != true){?>
+                                    <p class="text-primary m-0 font-weight-bold">
+                                        Pengumuman
+                                        <!-- <button class="btn btn-primary fa fa-plus rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button> -->
+                                    </p>
+                                    <?php }else{ ?>
+                                    <p class="text-primary m-0 font-weight-bold">
+                                        Pengumuman
                                         <button class="btn btn-primary fa fa-plus rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop"></button>
                                     </p>
+                                    <?php } ?>
                                 </div>
                                 <div class="card-body shadow">
                                     <table class="table">
@@ -29,6 +37,8 @@ if(isset($_POST['kirim'])) {
                                                
                                                     <?php echo $isi['ISI']; 
                                                     $nomor = $isi['NOMOR'];?>
+                                                    <?php if($cekRulesKepalaRuang != true && $cekRulesAsistenRuang != true && $cekRulesTeknisiRuang != true){?>
+                                                    <?php }else{ ?>
                                                     <button class="btn btn-primary rounded-pill fa fa-gear" name="" data-bs-toggle="modal" data-bs-target="#gearPengumuman"></button>
                                                     <br>
                                                     
@@ -57,7 +67,7 @@ if(isset($_POST['kirim'])) {
                                                         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                                                             <div class="modal-content">
                                                                 <div class="modal-header">
-                                                                    <h5 class="modal-title" id="staticBackdropLabel">Update Materi</h5>
+                                                                    <h5 class="modal-title" id="staticBackdropLabel">Update Pengumuman</h5>
                                                                     <button type="button" class="btn btn-danger fa fa-close rounded-pill" data-bs-dismiss="modal" aria-label="Close"></button>
                                                                 </div>
                                                                 <form action="" method="POST">
@@ -76,6 +86,8 @@ if(isset($_POST['kirim'])) {
                                                             </div>
                                                         </div>
                                                     </div>
+
+                                                    <?php } ?>
                                                     <?php $no++;} ?>
                                                     <?php
                                         if(isset($_POST['deletePengumuman'])) {

@@ -26,11 +26,6 @@
                         <p><?php echo $hasil['TELP'];?></p>
                     </div>
                 </div>
-                <div class="col-4 col-lg-4">
-                    <div class="form-group"><label for="email"><strong>Gedung</strong><br></label>
-                        <p>Pasca sarjana</p>
-                    </div>
-                </div>
                 <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4">
                     <div class="form-group"><label for="email"><strong>Deskripsi</strong><br></label>
                         <p><?php echo $hasil['KETERANGAN'];?><br></p>

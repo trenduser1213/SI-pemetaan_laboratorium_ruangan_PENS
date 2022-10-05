@@ -36,3 +36,10 @@ scp C:\Users\dimas\OneDrive\Documents\Pemetaan\index.php @pve.mis.pens.ac.id:/ho
 scp C:\Users\dimas\OneDrive\Documents\Pemetaan\index.php pve.mis.pens.ac.id:/home/www//
 scp C:\Users\dimas\OneDrive\Documents\Pemetaan\index.php www@pve.mis.pens.ac.id:/home/www//
 ext install esbenp.prettier-vscode
+clear
+su root
+ls - al
+cd home
+root
+sudo
+su

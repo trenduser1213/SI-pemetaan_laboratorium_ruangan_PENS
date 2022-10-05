@@ -1,1 +1,0 @@
-[ERROR] [default] [2022-06-23T00:59:48.445Z] GitHub Copilot could not connect to server. Extension activation failed: "Hostname/IP does not match certificate's altnames: Host: api.github.com. is not in the cert's altnames: DNS:*.pens.ac.id, DNS:pens.ac.id, DNS:www.pens.ac.id"

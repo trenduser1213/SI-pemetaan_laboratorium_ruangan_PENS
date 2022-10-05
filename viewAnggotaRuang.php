@@ -1,7 +1,15 @@
                                         <?php require_once 'includes/anggotaRuang.php' ;?>
                                         <div class="card shadow mb-3">
                                             <div class="card-header py-3 d-flex justify-content-between">
-                                                <p class="text-primary m-0 font-weight-bold">Anggota laboratorium ( <?php $jumlahAnggotaRuang = countAnggotaRuang($idRuang); echo $jumlahAnggotaRuang ?> )</p>
+                                                <p class="text-primary m-0 font-weight-bold">
+                                                <?php
+                                                    if($cekRulesKepalaRuang != true && $cekRulesAsistenRuang != true && $cekRulesTeknisiRuang != true){ ?>
+                                                    Anggota laboratorium ( <?php $jumlahAnggotaRuang = countAnggotaRuang($idRuang); echo $jumlahAnggotaRuang ?> ) 
+                                                    <?php }else{ ?>
+                                                    Anggota laboratorium ( <?php $jumlahAnggotaRuang = countAnggotaRuang($idRuang); echo $jumlahAnggotaRuang ?> )
+                                                    <a href="export_anggota.php?id_ruang=<?= $idRuang?>" class="btn btn-primary">Export Data</a>
+                                                    <?php } ?>
+                                                </p>
                                             </div>
                                             <div class="card-body">
                                                 <div class="table-responsive-lg scroll">

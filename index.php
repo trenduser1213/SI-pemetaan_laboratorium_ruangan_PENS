@@ -1,10 +1,13 @@
 <?php
 require_once ('includes/Oauth.php');
 require_once ('includes/func.inc.php');
-
+require_once ('includes/jurusan.php');
+$dataJurusan=dataJurusan();
 $obj = new Oauth();
 session_start();
-var_dump($_SESSION);
+// echo "<pre>";
+// var_dump($_SESSION);
+// echo "</pre>";
 if($_SESSION == null)
 {
   header('Location: login.php');
@@ -32,18 +35,34 @@ if(isset($_GET['logout']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Dashboard - PENS</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"> -->
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
     <link rel="stylesheet" href="assets/css/styles.min.css">
+
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin=""/> -->
+    <link rel="stylesheet" href="leaflet/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="">
+    <script src="leaflet/leaflet-src.js" integritas="sha512-Uj3ED3j6dg1xxMgtj4kF4W60Tc1HGboQ5gweT+hG1z8sBIc0ncFuoh3qV5XZF8ZqlEGlV9mt9E6MZhLN3zFDJg=="></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <!-- <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script> -->
+    
     <script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/> -->
+
+    <!-- <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
+
+    <style>
+        #map { height: 180px; }
+    </style>
 </head>
 
 <body id="page-top">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
-            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="<?php header("Refresh");;?>">
+            <div class="container-fluid d-flex flex-column p-0"><a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="index.php">
                     <div class="sidebar-brand-icon"><img class="img-fluid" src="assets/img/Logo_PENS_putih.png" width="50 px"></div>
                     <div class="sidebar-brand-text mx-3"><span>PENS</span></div>
                 </a>
@@ -98,19 +117,29 @@ if(isset($_GET['logout']))
                         </div>
                     </div>
                     <div class="row">
+                    </div>
+                    <!-- <div class="row"> -->
+                    
+                    <!-- </div> -->
+                    <div class="row">
                         <div class="col-lg-6 col-xl-6 offset-xl-3">
-                            <div class="pb-0 pt-2">
-                                <div>
-                                    <div class="col">
-                                        <div class="align-items-center form-row">
-                                            <div class="form-group col-sm"><input type="text" class="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="Search..."></div>
-                                            <div class="form-group col-sm-auto text-right"><button class="btn btn-primary pl-4 pr-4 rounded-pill" type="submit"><i class="fa fa-search"></i></button></div>
+                            <div class="pb-0 pt-2"><!-- <div> -->
+                                <div class="col">
+                                    <div class="align-items-center form-row">
+                                        <div class="form-group col-sm">
+                                            <form action="" method="post"><input id="txtsearch" type="text" class="form-control pl-4 pr-4 rounded-pill" name="search" placeholder="Search..."></form>
+                                        </div>
+                                        <div class="form-group col-sm-auto text-right">
+                                            <button onclick="search()" class="btn btn-primary pl-4 pr-4 rounded-pill" type="submit">
+                                                <i class="fa fa-search"></i>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div id="hasilSearch" class="div"></div>
                     <div class="row">
                       <?php 
                           if(isset($_GET['halaman'])){
@@ -128,10 +157,11 @@ if(isset($_GET['logout']))
                             }elseif ($_GET['halaman'] == 'detailRuangan') {
                                 include 'profileRuang.php';
                             }
-                            // }elseif($_GET['halaman'] == 'ruangan'){
-                            //   include 'ruangan.php';
+                            elseif($_GET['halaman'] == 'dashboard'){
+                              include 'dashboard.php';
+                            }
                           }else{
-                            include 'lab.php';
+                            include 'dashboard.php';
                           }
                       ?>
                        
@@ -150,8 +180,25 @@ if(isset($_GET['logout']))
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
     <script src="assets/js/script.min.js"></script>
+    <script>
+        function search(){
+            // alert('oke');
+            var x = document.getElementById("txtsearch").value;
+            console.log(x);
+            $.ajax({
+                url:"includes/search.php",
+                method:"POST",
+                data:{
+                    search : x
+                },
+                success:function(data){
+                    console.log(data);
+                    $("#hasilSearch").html(data)
+                }
+            })
+        }
+    </script>
 </body>
 
 </html>
